@@ -17,7 +17,7 @@ import java.io.Serializable;
 public class Forum implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int forum_id;
+    int id;
 
 
     

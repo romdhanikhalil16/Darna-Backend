@@ -19,7 +19,7 @@ import java.util.Date;
 public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int user_id;
+    int id;
     String username ;
     String password ;
     String email;

@@ -21,7 +21,7 @@ import java.io.Serializable;
 public class Reclamation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int reclamation_id ;
+    int id ;
     String description;
     String type;
 }

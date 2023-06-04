@@ -20,5 +20,5 @@ import java.io.Serializable;
 public class History implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int historyId;
+    int id;
 }

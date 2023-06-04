@@ -18,7 +18,7 @@ import java.io.Serializable;
 public class Commentaire implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int commentaire_id;
+    int id;
     String message;
     @Enumerated(EnumType.STRING)
     React react;

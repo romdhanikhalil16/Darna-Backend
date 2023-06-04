@@ -18,7 +18,7 @@ import java.util.Date;
 public class Article implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int article_id;
+    int id;
     float montant;
     @Enumerated(EnumType.STRING)
     TypeArticle typeArticle;

@@ -11,34 +11,34 @@ import java.util.List;
 @Service
 public class AdresseServiceImpl implements AdresseResource {
     @Autowired
-    AdresseRepo ra;
+    AdresseRepo adresseRepo;
     @Override
     public Adresse addAdress(Adresse adresse) {
-        return ra.save(adresse);
+        return adresseRepo.save(adresse);
     }
 
     @Override
     public Adresse updateAdresse(Adresse adresse) {
-        return ra.save(adresse);
+        return adresseRepo.save(adresse);
     }
 
     @Override
     public List<Adresse> getAllAdresse() {
-        return ra.selectAdresse();
+        return adresseRepo.getAllAdresses();
     }
 
     @Override
     public Adresse getAdresseById(int id) {
-        return ra.findByIdAndAdresse_id(id);
+        return adresseRepo.findAdresseById(id);
     }
 
     @Override
     public void deleteAdresse(int id) {
-         ra.deleteById(id);
+         adresseRepo.deleteById(id);
     }
 
     @Override
     public void deleteAdresse(Adresse adresse) {
-        ra.delete(adresse);
+        adresseRepo.delete(adresse);
     }
 }

@@ -16,7 +16,7 @@ import java.io.Serializable;
 public class Adresse implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int adresse_id;
+    int id;
     @Enumerated(EnumType.STRING)
     Gouvernorat gouvernorat;
     float area;

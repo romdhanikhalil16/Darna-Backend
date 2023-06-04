@@ -17,7 +17,7 @@ import java.io.Serializable;
 public class Criteria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int criteria_id;
+    int id;
     @Enumerated(EnumType.STRING)
     TypeTransaction transaction_type;
     int nbr_bathroom;
