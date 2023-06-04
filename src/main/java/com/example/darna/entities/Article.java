@@ -23,10 +23,12 @@ public class Article implements Serializable {
     @Enumerated(EnumType.STRING)
     TypeArticle typeArticle;
     String title;
-
+    @Temporal(TemporalType.DATE)
     Date date_modification;
-
+    @Temporal(TemporalType.DATE)
     Date date_creation;
+
+
 
 
 }
