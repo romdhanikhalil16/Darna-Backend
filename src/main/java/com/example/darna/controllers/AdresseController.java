@@ -1,7 +1,7 @@
 package com.example.darna.controllers;
 
-import com.example.darna.DAO.entities.Adresse;
-import com.example.darna.Service.Iservices.AdresseResource;
+import com.example.darna.dao.entities.Adresse;
+import com.example.darna.service.serviceInterfaces.AdresseResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
