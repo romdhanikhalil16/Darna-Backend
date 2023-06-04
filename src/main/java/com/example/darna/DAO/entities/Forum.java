@@ -1,7 +1,8 @@
-package com.example.darna.entities;
-import com.example.darna.entities.enums.Gouvernorat;
+package com.example.darna.DAO.entities;
+
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -13,15 +14,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Adresse implements Serializable {
+public class Forum implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int adresse_id;
-    @Enumerated(EnumType.STRING)
-    Gouvernorat gouvernorat;
-    float area;
-    float longitude;
-    float latitude;
+    int forum_id;
 
 
+    
 }

@@ -1,13 +1,11 @@
-package com.example.darna.entities;
+package com.example.darna.DAO.entities;
 
-import com.example.darna.entities.enums.React;
+import com.example.darna.DAO.entities.enums.RoleType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import    com.example.darna.entities.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
 @FieldDefaults(level = AccessLevel.PRIVATE )
 @Getter
 @Setter
@@ -16,11 +14,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Commentaire implements Serializable {
+public class Role implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int commentaire_id;
-    String message;
+    int role_id;
     @Enumerated(EnumType.STRING)
-    React react;
+    RoleType role;
 }
+

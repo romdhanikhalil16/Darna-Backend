@@ -1,6 +1,6 @@
-package com.example.darna.entities;
+package com.example.darna.DAO.entities;
 
-import com.example.darna.entities.enums.TypeArticle;
+import com.example.darna.DAO.entities.enums.TypeArticle;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

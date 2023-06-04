@@ -1,10 +1,12 @@
-package com.example.darna.entities;
+package com.example.darna.DAO.entities;
 
-import com.example.darna.entities.enums.React;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 @FieldDefaults(level = AccessLevel.PRIVATE )
@@ -15,11 +17,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Forum implements Serializable {
+public class History implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int forum_id;
-
-
-    
+    int historyId;
 }

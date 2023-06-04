@@ -1,4 +1,5 @@
-package com.example.darna.entities;
+package com.example.darna.DAO.entities;
+
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -17,8 +18,10 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
-public class History implements Serializable {
+public class Reclamation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int historyId;
+    int reclamation_id ;
+    String description;
+    String type;
 }

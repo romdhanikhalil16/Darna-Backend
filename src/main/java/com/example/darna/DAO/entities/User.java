@@ -1,11 +1,13 @@
-package com.example.darna.entities;
+package com.example.darna.DAO.entities;
 
-import com.example.darna.entities.enums.RoleType;
+
+import com.example.darna.DAO.entities.enums.RoleType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE )
 @Getter
 @Setter
@@ -14,11 +16,19 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
-public class Role implements Serializable {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int role_id;
+    int user_id;
+    String username ;
+    String password ;
+    String email;
+    String tel;
+    String adresse;
+    Date date_creation;
     @Enumerated(EnumType.STRING)
-    RoleType role;
-}
+    RoleType roleType;
 
+
+
+}
