@@ -14,6 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table
 public class Criteria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

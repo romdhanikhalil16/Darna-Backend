@@ -6,7 +6,10 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 @FieldDefaults(level = AccessLevel.PRIVATE )
 @Getter
 @Setter
@@ -15,9 +18,11 @@ import java.util.Date;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table
 public class Article implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+            @Column(name="id")
     int id;
     float montant;
     @Enumerated(EnumType.STRING)
@@ -27,8 +32,12 @@ public class Article implements Serializable {
     Date date_modification;
     @Temporal(TemporalType.DATE)
     Date date_creation;
-
-
+    @OneToOne
+    private Criteria criteria ;
+    @OneToOne
+    private Forum forum ;
+    @OneToOne
+    private Adresse adresse ;
 
 
 }

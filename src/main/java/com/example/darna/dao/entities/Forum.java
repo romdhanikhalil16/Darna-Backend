@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @FieldDefaults(level = AccessLevel.PRIVATE )
 @Getter
@@ -14,11 +15,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table
 public class Forum implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Commentaire> commentaires;
 
     
 }

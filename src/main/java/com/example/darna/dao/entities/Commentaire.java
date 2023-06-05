@@ -15,6 +15,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table
 public class Commentaire implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +23,10 @@ public class Commentaire implements Serializable {
     String message;
     @Enumerated(EnumType.STRING)
     React react;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    User user;
+    @ManyToOne
+    @JoinColumn(name = "article_id")
+    Article article;
 }
