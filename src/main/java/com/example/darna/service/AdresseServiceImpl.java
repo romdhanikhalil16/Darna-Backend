@@ -13,7 +13,7 @@ public class AdresseServiceImpl implements AdresseResource {
     @Autowired
     AdresseRepo adresseRepo;
     @Override
-    public Adresse addAdress(Adresse adresse) {
+    public Adresse addAdresse(Adresse adresse) {
         return adresseRepo.save(adresse);
     }
 
@@ -34,7 +34,7 @@ public class AdresseServiceImpl implements AdresseResource {
 
     @Override
     public void deleteAdresse(int id) {
-         adresseRepo.deleteById(id);
+         adresseRepo.deleteAdresseById(id);
     }
 
     @Override

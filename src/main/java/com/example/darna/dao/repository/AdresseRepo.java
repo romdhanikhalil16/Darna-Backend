@@ -9,10 +9,11 @@ import java.util.List;
 
 @Repository
 public interface AdresseRepo extends JpaRepository<Adresse,Integer> {
-
-    Adresse findAdresseById(int id);
     @Query("select a from Adresse a")
     List<Adresse> getAllAdresses();
+    Adresse findAdresseById(int id);
+    void deleteAdresseById(int id);
+
 
 
 }

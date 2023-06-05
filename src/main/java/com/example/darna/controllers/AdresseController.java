@@ -11,32 +11,32 @@ import java.util.List;
 @RequestMapping("/adresse")
 public class AdresseController {
     @Autowired
-    AdresseResource ar;
+    AdresseResource adresseResource;
 
-    @PostMapping("ajouterAdress")
+    @PostMapping("addAdress")
     Adresse ajouterAdresse(@RequestBody Adresse adresse) {
-        return ar.addAdress(adresse);
+        return adresseResource.addAdresse(adresse);
     }
-    @GetMapping("GetAdresse")
+    @GetMapping("GetAdress")
     public Adresse AdresseParId(@RequestParam int id) {
-        return ar.getAdresseById(id);
+        return adresseResource.getAdresseById(id);
     }
     @GetMapping("GetAll")
     public List<Adresse> adresseList() {
-        return ar.getAllAdresse();
+        return adresseResource.getAllAdresse();
     }
     //thabeto fiha
-    @DeleteMapping("DeletAdresse")
+    @DeleteMapping("DeleteAdress")
     void deleteAdresse(@RequestBody Adresse adresse){
-        ar.deleteAdresse(adresse);
+        adresseResource.deleteAdresse(adresse);
     }
     @DeleteMapping("DeletAdresseId")
     void deleteAdresseId(@RequestParam int id){
-        ar.deleteAdresse(id);
+        adresseResource.deleteAdresse(id);
     }
     @PutMapping("modifierAdress")
     void updateAdresse(@RequestBody Adresse adresse){
-        ar.updateAdresse(adresse);
+        adresseResource.updateAdresse(adresse);
     }
 
 }

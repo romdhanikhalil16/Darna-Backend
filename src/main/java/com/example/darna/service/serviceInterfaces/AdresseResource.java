@@ -5,7 +5,7 @@ import com.example.darna.dao.entities.Adresse;
 import java.util.List;
 
 public interface AdresseResource {
-    Adresse addAdress (Adresse adresse);
+    Adresse addAdresse (Adresse adresse);
     Adresse updateAdresse (Adresse adresse);
     List<Adresse> getAllAdresse();
     Adresse getAdresseById(int id);
