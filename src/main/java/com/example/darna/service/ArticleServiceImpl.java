@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ArticleServiceImpl implements ArticleResource{
@@ -34,7 +35,7 @@ public class ArticleServiceImpl implements ArticleResource{
     }
 
     @Override
-    public Article getArticleById(int id) {
+    public Optional<Article> getArticleById(int id) {
         return articleRepo.findArticleById(id);
     }
 

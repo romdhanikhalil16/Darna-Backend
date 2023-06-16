@@ -1,9 +1,9 @@
 package com.example.darna.service.serviceInterfaces;
 
-import com.example.darna.dao.entities.Adresse;
 import com.example.darna.dao.entities.Article;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ArticleResource {
     Article addArticle (Article article);
@@ -12,7 +12,7 @@ public interface ArticleResource {
 
     List<Article> getAllArticles();
 
-    Article getArticleById(int id);
+    Optional<Article> getArticleById(int id);
     void deleteArticle(int id);
     void deleteArticle(Article article);
 }

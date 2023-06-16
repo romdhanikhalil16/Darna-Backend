@@ -9,6 +9,7 @@ public interface ForumResource {
     Forum addForum (Forum forum);
     Forum updateForum (Forum forum);
     List<Forum> getAllForum();
+    Forum addCommentToForum(int commentId, Forum forum);
     Forum getForumById(int id);
     void deleteForum(int id);
     void deleteForum(Forum forum);

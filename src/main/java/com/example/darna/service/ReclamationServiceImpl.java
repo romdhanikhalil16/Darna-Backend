@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ReclamationServiceImpl implements ReclamationResource {
@@ -28,7 +29,7 @@ public class ReclamationServiceImpl implements ReclamationResource {
     }
 
     @Override
-    public Reclamation getReclamationById(int id) {
+    public Optional<Reclamation> getReclamationById(int id) {
         return reclamationRepo.findReclamationById(id);
     }
 

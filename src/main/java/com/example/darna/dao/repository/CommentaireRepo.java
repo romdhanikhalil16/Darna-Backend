@@ -1,6 +1,5 @@
 package com.example.darna.dao.repository;
 
-import com.example.darna.dao.entities.Article;
 import com.example.darna.dao.entities.Commentaire;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -14,4 +13,5 @@ public interface CommentaireRepo extends CrudRepository<Commentaire,Integer> {
     List<Commentaire> getAllCommentaires();
     Commentaire findCommentaireById(int id);
     void deleteCommentaireById(int id);
+    Commentaire findCommentaireByArticle(int postId);
 }
